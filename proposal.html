@@ -903,6 +903,75 @@
     margin-bottom: 8px;
   }
 
+  /* ============ ADD-ON VIDEO PROOF ============ */
+  .addon-proof {
+    margin-top: 48px;
+    padding-top: 48px;
+    border-top: 1px solid var(--border);
+  }
+  .addon-proof-tag {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--amd-red);
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .addon-proof-title {
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1.15;
+    color: var(--near-black);
+    margin-bottom: 12px;
+    max-width: 28ch;
+  }
+  .addon-proof-sub {
+    font-size: 15px;
+    color: var(--dark-gray);
+    line-height: 1.6;
+    max-width: 60ch;
+    margin-bottom: 36px;
+  }
+  .video-category { margin-bottom: 40px; }
+  .video-category:last-child { margin-bottom: 0; }
+  .video-category-label {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--amd-red);
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 280px));
+    gap: 20px;
+  }
+  .video-grid.two { grid-template-columns: repeat(2, minmax(0, 280px)); }
+  .video-grid.single { grid-template-columns: minmax(0, 280px); }
+  .video-embed {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    background: var(--near-black);
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .video-embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  @media (max-width: 900px) {
+    .video-grid,
+    .video-grid.two { grid-template-columns: 1fr 1fr; }
+    .video-grid.single { grid-template-columns: 1fr; max-width: 240px; }
+  }
+
   /* ============ CLIENTS ============ */
   .client-grid {
     display: grid;
@@ -1212,6 +1281,48 @@
           <div class="addon-purpose">
             <span class="addon-purpose-label">Purpose</span>
             Quick, engaging social media content with high impact. Best paired with a content push, listing launch, or seasonal campaign.
+          </div>
+        </div>
+      </div>
+
+      <div class="addon-proof">
+        <div class="addon-proof-tag">Sample Work</div>
+        <h3 class="addon-proof-title">What the session looks like &mdash; and what gets produced.</h3>
+        <p class="addon-proof-sub">Behind-the-scenes from our shoots, finished reels delivered to past clients, and what they have to say about the work.</p>
+
+        <div class="video-category">
+          <div class="video-category-label">Behind The Scenes</div>
+          <div class="video-grid two">
+            <div class="video-embed">
+              <iframe src="https://www.youtube.com/embed/xqwON9t8Amg" title="Behind the scenes 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-embed">
+              <iframe src="https://www.youtube.com/embed/5-5ViuIIr30" title="Behind the scenes 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-category">
+          <div class="video-category-label">Finished Reels</div>
+          <div class="video-grid">
+            <div class="video-embed">
+              <iframe src="https://www.youtube.com/embed/8qBCg7Cxv2c" title="Finished reel 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-embed">
+              <iframe src="https://www.youtube.com/embed/Saf9YVdXeHA" title="Finished reel 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-embed">
+              <iframe src="https://www.youtube.com/embed/GG-fVqutLw8" title="Finished reel 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-category">
+          <div class="video-category-label">Client Testimonial</div>
+          <div class="video-grid single">
+            <div class="video-embed">
+              <iframe src="https://www.youtube.com/embed/92DLQT_ptJc" title="Client testimonial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
           </div>
         </div>
       </div>
